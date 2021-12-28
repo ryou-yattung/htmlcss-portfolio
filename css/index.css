@@ -1,0 +1,1328 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'David Libre', serif;
+  font-size: 1.5rem;
+}
+
+/*!
+ * ress.css • v1.1.2
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+ */
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+/* Remove margin, padding of all elements and set background-no-repeat as default */
+* {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements */
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+/* Add the correct display in iOS 4-7.*/
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+}
+
+/*
+* Correct `block` display not defined for any HTML5 element in IE 8/9
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox
+* Correct `block` display not defined for `main` in IE 11
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden],
+template {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  /* Add a bordered underline effect in all browsers */
+  text-decoration: none;
+  /* Remove text decoration in Firefox 40+ */
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+  -webkit-text-decoration-skip: objects;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+}
+
+dfn {
+  font-style: italic;
+  /* Address styling not present in Safari and Chrome */
+}
+
+/* Address styling not present in IE 8/9 */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+[type="number"] {
+  width: auto;
+  /* Firefox 36+ */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Safari 8+ */
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Safari 8 */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule. */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: 0;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+  color: inherit;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  /* Internet Explorer 11- */
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* Internet Explorer 11+, Windows Phone 8.1+ */
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+/* Specify the progress cursor of updating elements */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Selection
+   # ================================================================= */
+/* Specify text selection background color and omit drop shadow */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+#intro_body {
+  width: 100vw;
+  height: calc(100vh + 50px);
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+
+.intro {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.intro_bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+.intro .bg_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.25);
+  background-size: 100%;
+}
+
+.intro_name, .intro_txt, .intro_scroll {
+  position: absolute;
+  z-index: 50;
+  color: white;
+}
+
+.intro_name {
+  top: 30%;
+  left: 10%;
+  font-size: 2rem;
+}
+
+.intro_txt {
+  bottom: 10%;
+  left: 10%;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+.intro_scroll {
+  bottom: 0;
+  right: 10%;
+  width: 30px;
+  height: 140px;
+  font-size: 1.4rem;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+}
+
+.intro_scroll::after {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 2px;
+  display: block;
+  background: white;
+}
+
+.intro_scroll p::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  display: block;
+  border-radius: 50%;
+  background: white;
+  -webkit-animation: anime 1.5s ease infinite;
+          animation: anime 1.5s ease infinite;
+}
+
+@-webkit-keyframes anime {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes anime {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+#portfolio {
+  display: none;
+  width: 100vw;
+  height: auto;
+}
+
+.myView {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+header .logo {
+  position: absolute;
+  left: 2%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header .logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+header .menu {
+  position: fixed;
+  right: 2%;
+  z-index: 1000;
+}
+
+header .menu i {
+  font-size: 3.5rem;
+  color: #372F1F;
+  cursor: pointer;
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  left: -200%;
+  width: 100vw;
+  height: 100vh;
+  transition: 1s;
+  background-color: #D9CEBB;
+  z-index: 900;
+}
+
+header nav li {
+  list-style: none;
+}
+
+header nav img {
+  width: 40px;
+  height: 40px;
+}
+
+header nav .menu_tilte {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header nav .menu_tilte li {
+  margin: 70px auto;
+  font-size: 4rem;
+  color: white;
+}
+
+header nav .menu_ssm {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header nav .menu_ssm li {
+  margin: 70px auto;
+}
+
+header nav .menu_language {
+  width: 450px;
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+  margin-left: 90px;
+}
+
+header nav .menu_language ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .menu_language ul li {
+  font-size: 3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header nav .menu_language ul .language_border::after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 3px;
+  margin-left: 30px;
+  background: #372F1F;
+}
+
+.myView_bg {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 85%;
+  padding-left: 230px;
+  z-index: 50;
+}
+
+.myView_bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.myView_intro {
+  position: absolute;
+  bottom: 25%;
+  left: 80px;
+}
+
+.myView_intro h2 {
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  color: #372F1F;
+}
+
+.myView_intro h2 span {
+  color: white;
+}
+
+.myView_txt {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+}
+
+.myView_txt p {
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #372F1F;
+}
+
+.myView_reason {
+  position: absolute;
+  bottom: -8%;
+  right: 5%;
+}
+
+.myView_reason h2 {
+  font-size: 13rem;
+  letter-spacing: 9rem;
+  color: white;
+}
+
+.myView_scroll {
+  position: absolute;
+  bottom: 0%;
+  right: 50px;
+  width: 30px;
+  height: 15%;
+  font-size: 1.4rem;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  color: white;
+}
+
+.myView_scroll::after {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 2px;
+  display: block;
+  background: white;
+}
+
+.myView_scroll p {
+  padding-top: 10px;
+}
+
+.myView_scroll p::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  display: block;
+  border-radius: 50%;
+  background: white;
+  -webkit-animation: anime 1.5s ease infinite;
+          animation: anime 1.5s ease infinite;
+}
+
+@keyframes anime {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+.aboutMe_bg {
+  position: absolute;
+  top: 70vh;
+  width: calc(100vw - 30px);
+  height: 1100px;
+  z-index: -5;
+  overflow: hidden;
+  background: #D9CEBB;
+}
+
+.aboutMe {
+  width: calc(100vw - 30px);
+  height: 750px;
+  overflow: hidden;
+}
+
+.aboutMe_title {
+  margin-top: 50px;
+  padding-left: 80px;
+}
+
+.aboutMe_title h2 {
+  font-size: 13rem;
+  letter-spacing: 1rem;
+  color: #372F1F;
+}
+
+.aboutMe_title h3 {
+  font-size: 3rem;
+  margin-bottom: 67px;
+}
+
+.aboutMe_detail {
+  display: flex;
+  align-items: center;
+}
+
+.aboutMe_detail_img img {
+  width: 608px;
+  height: 406px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.aboutMe_detail_txt {
+  margin-left: 77px;
+}
+
+.aboutMe_detail_txt .name h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.aboutMe_detail_txt .name p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.aboutMe_detail_txt .view h4 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.aboutMe_detail_txt .view p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1920px) {
+  .aboutMe_detail_txt {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .aboutMe_detail_txt .name {
+    width: 500px;
+    margin-right: 70px;
+  }
+  .aboutMe_detail_txt .name p {
+    line-height: 4rem;
+  }
+  .aboutMe_detail_txt .view {
+    width: 500px;
+  }
+  .aboutMe_detail_txt .view p {
+    line-height: 3rem;
+  }
+}
+
+.challenge_bg {
+  position: absolute;
+  right: 0;
+  width: calc(100vw - 30px);
+  height: 1200px;
+  z-index: -10;
+  overflow: hidden;
+  background: #F9C270;
+}
+
+.challenge {
+  width: calc(100vw - 30px);
+  height: 1000px;
+  margin-left: 30px;
+}
+
+.challenge_title {
+  margin-top: 200px;
+  padding-right: 80px;
+  text-align: right;
+}
+
+.challenge_title h2 {
+  font-size: 13rem;
+  letter-spacing: 1rem;
+  color: #372F1F;
+}
+
+.challenge_title h3 {
+  font-size: 3rem;
+  margin-bottom: 67px;
+}
+
+.challenge_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.challenge_inner .language, .challenge_inner .design, .challenge_inner .coding {
+  text-align: center;
+}
+
+.challenge_inner .language h4, .challenge_inner .design h4, .challenge_inner .coding h4 {
+  margin-bottom: 5px;
+  font-size: 3rem;
+}
+
+.challenge_inner .language h5, .challenge_inner .design h5, .challenge_inner .coding h5 {
+  margin-bottom: 40px;
+  font-size: 1.4rem;
+  color: #71613f;
+}
+
+.challenge_inner .language img, .challenge_inner .design img, .challenge_inner .coding img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 34px;
+}
+
+.challenge_inner .language p, .challenge_inner .design p, .challenge_inner .coding p {
+  font-size: 1.4rem;
+  color: #372F1F;
+  text-align: left;
+  line-height: 2.5rem;
+}
+
+.challenge_detail {
+  width: 277px;
+  height: 67px;
+  display: block;
+  margin: 100px auto;
+  border: 4px #372F1F solid;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  color: #372F1F;
+  line-height: 67px;
+  transition: 1s;
+}
+
+.challenge_detail:hover {
+  background-color: #372F1F;
+  color: #F9C270;
+}
+
+.works {
+  width: 100vw;
+  height: auto;
+  margin-top: 100px;
+}
+
+.works_header {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.works_header .works_name {
+  margin-left: 50px;
+}
+
+.works_header .works_name h2 {
+  font-size: 13rem;
+  letter-spacing: 1rem;
+  color: #372F1F;
+}
+
+.works_header .works_name h3 {
+  font-size: 3rem;
+  margin-bottom: 67px;
+}
+
+.works_header .works_type {
+  display: flex;
+  margin-right: 50px;
+  text-align: center;
+  margin-top: 50px;
+  line-height: 75px;
+  border-bottom: 6px #372F1F solid;
+}
+
+.works_header .works_type p {
+  width: 200px;
+  height: 75px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.works_header .works_type .btnAction {
+  background: #372F1F;
+  color: white;
+}
+
+.works_inner {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+
+.works_inner .worksBg {
+  position: absolute;
+  left: 0;
+}
+
+.works_inner .worksBg p {
+  font-size: 25rem;
+  color: #372F1F60;
+  letter-spacing: 2rem;
+}
+
+.works_inner .worksIntro_web img {
+  width: 75%;
+  height: 600px;
+  position: absolute;
+  top: 130px;
+  right: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.works_inner .worksIntro {
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+}
+
+.works_inner .worksIntro .worksIntro_title {
+  margin-left: 50px;
+  font-size: 5rem;
+  color: #372F1F;
+}
+
+.works_inner .worksIntro .worksIntro_title .WebMagin {
+  margin-left: 80px;
+}
+
+.works_inner .worksIntro .worksIntro_detail {
+  width: 100%;
+  height: 400px;
+  background: #F9C270;
+  color: #372F1F;
+}
+
+.works_inner .worksIntro .worksIntro_detail .worksIntro_detailTitle {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.works_inner .worksIntro .worksIntro_detail .worksIntro_detailTitle h4 {
+  font-size: 3rem;
+}
+
+.works_inner .worksIntro .worksIntro_detail .worksIntro_detailTitle p {
+  font-size: 1.4rem;
+  color: #372F1F60;
+}
+
+.works_inner .worksIntro .worksIntro_detail .worksIntro_detailTxt p {
+  margin: 40px auto;
+  width: 450px;
+}
+
+.works_inner .worksIntro .worksIntro_detail .worksIntro_detailType, .works_inner .worksIntro .worksIntro_detail .worksIntro_detailTool {
+  display: flex;
+  margin-left: 75px;
+  margin-bottom: 40px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.works_inner .worksIntro .worksIntro_detail .worksIntro_detailType p, .works_inner .worksIntro .worksIntro_detail .worksIntro_detailTool p {
+  margin-right: 30px;
+}
+
+.works .worksIntro_change {
+  position: absolute;
+  bottom: -50px;
+  right: 20%;
+}
+
+.works .worksIntro_change p {
+  font-size: 3rem;
+  color: #372F1F;
+}
+
+.works_in.works_innerShow {
+  display: block;
+}
+
+.works_in {
+  display: none;
+}
+
+.works_inner2 {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+}
+
+.works_inner2 .worksBg2 {
+  position: absolute;
+  right: 0;
+}
+
+.works_inner2 .worksBg2 p {
+  font-size: 25rem;
+  color: #372F1F60;
+  letter-spacing: 2rem;
+}
+
+.works_inner2 .worksIntro_web2 img {
+  width: 35%;
+  position: absolute;
+  top: 130px;
+  left: 15%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.works_inner2 .worksIntro2 {
+  width: 40%;
+  height: 350px;
+  position: absolute;
+  bottom: 30%;
+  right: 10%;
+}
+
+.works_inner2 .worksIntro2 .worksIntro_title2 {
+  margin-right: 50px;
+  font-size: 5rem;
+  color: #372F1F;
+  text-align: right;
+}
+
+.works_inner2 .worksIntro2 .worksIntro_title2 .graphicMagin {
+  margin-right: 200px;
+  font-size: 5rem;
+}
+
+.works_inner2 .worksIntro2 .worksIntro_detail2 {
+  width: 100%;
+  height: 400px;
+  background: #D9CEBB;
+  color: #372F1F;
+}
+
+.works_inner2 .worksIntro2 .worksIntro_detail2 .worksIntro_detail2Title {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.works_inner2 .worksIntro2 .worksIntro_detail2 .worksIntro_detail2Title h4 {
+  font-size: 3rem;
+}
+
+.works_inner2 .worksIntro2 .worksIntro_detail2 .worksIntro_detail2Txt {
+  width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.works_inner2 .worksIntro2 .worksIntro_detail2 .worksIntro_detail2Type {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: flex;
+  text-align: left;
+}
+
+.works_inner2 .worksIntro2 .worksIntro_detail2 .worksIntro_detail2Type p {
+  margin-right: 30px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 1921px) {
+  .worksIntro2 {
+    bottom: 30%;
+    right: 10%;
+  }
+}
+
+.worksBtn {
+  width: 277px;
+  height: 67px;
+  display: block;
+  margin: 100px auto 0;
+  text-decoration: none;
+  text-align: center;
+  border: 4px #372F1F solid;
+  font-size: 2rem;
+  background: #372F1F;
+  color: white;
+  line-height: 67px;
+  transition: 1s;
+}
+
+.worksBtn:hover {
+  background-color: white;
+  color: #372F1F;
+  border: 4px #372F1F solid;
+}
+
+.contact {
+  width: 100vw;
+  height: 585px;
+  position: relative;
+  margin-top: 150px;
+  background: #D9CEBB;
+}
+
+.contact .contact_title {
+  padding-top: 50px;
+  margin-right: 50px;
+  text-align: right;
+}
+
+.contact .contact_title h2 {
+  font-size: 13rem;
+  letter-spacing: 1rem;
+  color: #372F1F;
+}
+
+.contact .contact_title h3 {
+  font-size: 3rem;
+  margin-bottom: 67px;
+}
+
+.contact .contact_mail {
+  width: 550px;
+  text-align: center;
+  margin: 70px auto 20px;
+  border-bottom: 5px #372F1F solid;
+}
+
+.contact .contact_mail a {
+  font-size: 4rem;
+  color: #372F1F;
+  text-decoration: none;
+}
+
+.contact .contact_txt {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.contact .contact_anime {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 50%;
+  bottom: 30px;
+  cursor: pointer;
+  transform: scale(-1, 1);
+}
+
+.contact .contact_anime img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact .contact_anime p {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  color: #372F1F;
+  opacity: 0;
+  transform: scale(-1, 1) rotate(0.35turn) translate(-30px);
+  transition: 0.5s;
+}
+
+.contact .contact_anime:hover p {
+  opacity: 1;
+  transform: scale(-1, 1) rotate(0.35turn) translate(-30px, -30%);
+}
+
+.animeFly {
+  -webkit-animation: animeFly 5s ease 1;
+          animation: animeFly 5s ease 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animeFly {
+  0% {
+    right: 50%;
+    bottom: 30px;
+    transform: scale(-1, 1);
+  }
+  90% {
+    right: 5%;
+    transform: scale(-1, 1) rotate(0.1turn);
+  }
+  100% {
+    right: 5%;
+    bottom: 100px;
+    transform: scale(-1, 1) rotate(0.1turn);
+  }
+}
+
+@keyframes animeFly {
+  0% {
+    right: 50%;
+    bottom: 30px;
+    transform: scale(-1, 1);
+  }
+  90% {
+    right: 5%;
+    transform: scale(-1, 1) rotate(0.1turn);
+  }
+  100% {
+    right: 5%;
+    bottom: 100px;
+    transform: scale(-1, 1) rotate(0.1turn);
+  }
+}
+
+footer {
+  width: 100vw;
+  height: 85px;
+  background: #372F1F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  padding: 0 20px;
+  list-style: none;
+  font-size: 2rem;
+}
+
+footer .footer_nav {
+  margin-left: 50px;
+}
+
+footer .footer_ssm {
+  margin-right: 50px;
+}
+
+footer .footer_ssm img {
+  width: 30px;
+  height: 30px;
+}

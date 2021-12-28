@@ -1,0 +1,52 @@
+doctype html
+html(lang="ja")
+     head
+          include _head.pug 
+          link(rel="stylesheet", href="css/works.css")
+          script(src="js/jquery-3.6.0.min.js") 
+          script(src="js/works.js") 
+          title Works | リョウイットン
+
+     body 
+          //- header
+          include _hearder.pug
+
+          section.works
+               nav.menu 
+                    ul 
+                         li.menuBlock 全部
+                         li １年
+                         li ２年
+                         li ３年
+
+               .works_header
+                    .worksTitle
+                         h2 WORKS
+                         h3 作品
+
+               .works_list 
+                    .works_flex
+                         .works_Img
+                              a(href="file:///Users/yattungleung/Desktop/portfolio/work/KICHA/web/index.html")
+                                   img(src="img/works_01.png", alt="works1")
+                         .works_detail
+                              .works_detailTitle
+                                   h3 喫茶 / KICHA 
+                                   //- h4 
+                                   p 季茶は梅田にある喫茶店である。平日は喫茶店で、週末は陶芸教室である。梅田は色々な学校があるから、授業が終わった後、お茶一杯飲んで勉強が集中できる。陶芸教室は自分の手で自分のカップを作り、店に来るときにカップは持参できる。
+                              .works_myselt
+                                   .works_myseltTime
+                                        p 個人制作
+                                        p 1年
+                                   .works_myseltSkills 
+                                        .skills
+                                             img(src="img/html.png", alt="")
+                                             p HTML 
+                                        .skills
+                                             img(src="img/css.png", alt="")
+                                             p CSS 
+                                        //- .js 
+                                             img(src="", alt="")
+                                             p JS
+                              .works_detailBtn 
+                                   a(href="file:///Users/yattungleung/Desktop/portfolio/work/KICHA/web/index.html")  サイトを見る

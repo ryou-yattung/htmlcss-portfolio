@@ -1,0 +1,101 @@
+doctype html
+html(lang="ja")
+     head
+          include _head.pug 
+          link(rel="stylesheet", href="css/aboutMe.css")
+          script(src="js/jquery-3.6.0.min.js") 
+          script(src="js/aboutMe.js") 
+          title AboutMe | リョウイットン
+
+     body 
+          #portfolio
+               .myReasonBg
+               section.aboutMe
+                    include _hearder.pug
+               
+                    .aboutMe_intro
+                         h2 About me
+                         img(src="img/intro2.jpg", alt="intro_img")
+               
+               section.myView
+                    .myView_me
+                         .myView_me_name
+                              h3 リョウイットン
+                                   span LEUNG YATTUNG
+                              p 
+                                   |香港出身で、フォントエンジニアを目指している。
+                                   br
+                                   |2019年日本に留学し始める。
+                                   br
+                                   |2020年ECCコンピュータ専門学校に入学して
+                                   br
+                                   |2022年ECCコンピュータ専門学校を卒業予定。
+                              h4 好きなこと：水泳・アニメ・旅行 
+                         .myView_me_skill
+                              h3 Skill
+                              .myView_me_skillImg 
+                                   .code 
+                                        img(src="img/html.png", alt="html")
+                                        p HTML 
+                                   .code 
+                                        img(src="img/css.png", alt="css")
+                                        p CSS
+                                   .code 
+                                        img(src="img/js.png", alt="js")
+                                        p JS
+                                   .code 
+                                        img(src="img/php.png", alt="php")
+                                        p PHP
+                         #skill_width.myView_me_skill
+                              h3 My Site
+                              .myView_me_skillImg
+                                   .code
+                                        img(src="img/ig.png", alt="ig")
+                                        p IG 
+                                   .code
+                                        img(src="img/twitter.png", alt="twitter")
+                                        p LINE 
+                                   .code
+                                        img(src="img/github2.png", alt="github")
+                                        p GITHUT 
+                              
+                    .myView_reason
+                         h3 
+                              |新しい体験をし
+                              br
+                              |新発想を生み出す
+                         p 自分の知らない土地、自分の知らない言語、自分の知らない人と出会い。まだみぬ場所に行けば自ずと学びも増え、楽しいあまりです。新しい体験をたくさんし、視野が広がり、新発想も生み出す分けだと思う。
+
+               section.myReason
+                    .myReason_question
+                         p １、どうして旅行が好き？
+                         p ２、どうして日本に？
+                         p ３、どうしてWEBコース？
+
+                    .myReason_answer
+                         .answer
+                              img(src="img/about_tri.jpeg", alt="tri")
+                              .answerFont
+                                   h4 １、どうして旅行が好き？
+                                   p 香港にいる時、たまに国際交流会に参加していた。様々な国籍な人と出会って、色々な異文化の話を聞いて、外国に行ってみたいなという気持ちが現れました。一番よかった場所は台湾で、人が優しくて、食べ物もおいしかった。                         
+                         .answer
+                              img(src="img/about_jap.jpeg", alt="japan")
+                              .answerFont
+                                   h4 ２、どうして日本に？
+                                   p 中学生の時、一回日本に旅行へ行って日本の景色を見た後、好きになった。日本は香港と違って四季がはっきりしているから、四季によっては景色が変わる。それは香港が決して見られないことだから。もっと日本の文化を体験したい、日本ならではの絶景を見たいので日本で留学を決めた。
+                         .answer.answer3
+                              img(src="img/about_web.jpeg", alt="web")
+                              .answerFont
+                                   h4 ３、どうしてWEBコース？
+                                   p 中学生の時、一回日本に旅行へ行って日本の景色を見た後、好きになった。日本は香港と違って四季がはっきりしているから、四季によっては景色が変わる。それは香港が決して見られないことだから。もっと日本の文化を体験したい、日本ならではの絶景を見たいので日本で留学を決めた。
+                              
+               section.training 
+                    h2 TRAINING
+                    h3 練習
+
+                    //- .training_flex 
+                         .training_List 
+                              .training
+
+               footer 
+                    include _contact.pug

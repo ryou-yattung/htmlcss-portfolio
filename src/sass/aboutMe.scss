@@ -1,0 +1,311 @@
+@import "common";
+@import "mixin";
+@import "ress";
+@import "vars";
+
+// #portfolio
+#portfolio{
+     width: 100vw;
+     height: auto;
+}
+
+.myReasonBg{
+     position: fixed;
+     top: 0;
+     width: 100vw;
+     height: 100vh;
+     background: url(../img/about_map.jpeg) center no-repeat;
+     background-size: cover;
+     opacity: 0.4;
+     z-index: 1;
+}
+
+section.aboutMe{
+     position: relative;
+     width: 100vw;
+     height: 100vh;
+     margin: 0 auto;
+     z-index: 100;
+}
+
+// nav.menu
+header{
+     @include menu;
+}
+
+.aboutMe_intro{
+     position: relative;
+     bottom: 0;
+     width: 100vw;
+     height: 100vh;
+     background: white;
+
+     h2{
+          width: 800px;
+          height: auto;
+          position: absolute;
+          top: 90px;
+          right: 0;
+          left: 0;
+          margin: auto;
+          z-index: 200;
+          text-align: center;
+          font-size: 13rem;
+          color: $fontClour;
+          letter-spacing: 2rem;
+     }
+
+     img{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 1000px;
+          height: 600px;
+          object-fit: cover;
+          z-index: 100;
+     }
+
+     @media screen and (min-width: 1920px){
+          h2{
+               top: 150px;
+          }
+          img{
+               width: 1400px;
+               // height: ;
+          }
+     }
+}
+
+section.myView{
+     position: relative;
+     width: 100vw;
+     height: 700px;
+     padding: 40px;
+     z-index: 100;
+     background: white;
+
+     .myView_me{
+          position: absolute;
+          top: -100px;
+          right: 0;
+          width: 540px;
+          height: 700px;
+          padding: 40px;
+          background: white;
+          color: $fontClour;
+          box-shadow: 0 3px 3px 3px #00000020;
+          z-index: 500;
+
+          &_name{
+               font-size: 2rem;
+               font-weight: bolder;
+
+               h3{
+                    margin-bottom: 50px;
+                    
+                    span{
+                         margin-left: 30px;
+                         font-size: 1.4rem;
+                         font-weight: bolder;
+                    }
+               }
+
+               p{
+                    font-size: 1.4rem;
+                    line-height: 2.5rem;
+               }
+
+               h4{
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+                    font-size: 1.4rem;
+               }
+          }
+
+          &_skill{
+               width: 380px;
+               height: auto;
+               margin-bottom: 25px;
+
+               h3{
+                    width: 420px;
+                    border-bottom: 5px solid $fontClour;
+                    font-size: 3rem;
+               }
+
+               .myView_me_skillImg{
+                    display: flex;
+                    margin-top: 25px;
+                    justify-content: space-between;
+
+                    .code{
+                         width: 20%;
+                         height: 100px;
+                         text-align: center;
+
+                         img{
+                              width: 45px;
+                              height: 45px;
+                              object-fit: contain;
+                              margin-bottom: 10px;
+                         }
+
+                         p{
+                              font-size: 1.4rem;
+                              font-weight: bold;
+                         }
+                    }
+               }
+          }
+
+          #skill_width{
+               width: 300px;
+
+               .code:first-child{
+                    margin-left: 10px;
+               }
+          }
+     } 
+
+     .myView_reason{
+          margin-top: 120px;
+          margin-left: 135px;
+          color: $fontClour;
+
+          h3{
+               font-size: 6rem;
+               line-height: 8rem;
+          }
+
+          p{
+               width: 500px;
+               margin-top: 80px;
+               font-size: 1.4rem;
+               line-height: 4rem;
+               text-align: left;
+          }
+     }
+     @media screen and (min-width: 1920px){
+          .myView_reason{
+              margin-left: 150px;
+
+              h3{
+                    font-size: 7rem;
+                    line-height: 9rem;
+               }
+
+               p{
+                    margin-left: 150px;
+                    font-size: 1.8rem;
+                    line-height: 4rem;
+               }
+          }
+     }
+}
+
+
+section.myReason{
+     position: relative;
+     width: 100vw;
+     height: 1880px;
+     z-index: 100;
+     color: $fontClour;
+
+     .myReason_question{
+          position: absolute;
+          margin-top: 50px;
+          left: 15%;
+          width: 300px;
+          height: 325px;
+          background: #ffffff;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          box-shadow: 0 3px 6px #00000020;
+          transition: 0.5s;
+
+          p{
+               text-align: center;
+               font-size: 1.6rem;
+          }
+     }
+
+     .myReason_answer{
+          width: 550px;
+          height: auto;
+          margin-right: 200px;
+          float: right;
+
+          .answer{
+               width: 100%;
+               height: auto;
+               margin-top: 50px;
+               margin-bottom: 50px;
+               background: #ffffff;
+               box-shadow: 0 3px 6px #00000020;
+
+               img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+               }
+
+               .answerFont{
+                    width: 450px;
+                    margin: auto;
+                    padding: 20px 0 40px;
+
+                    h4{
+                         margin-bottom: 37px;
+                         font-size: 2rem;
+                    }
+
+                    p{
+                         font-size: 1.4rem;
+                    }
+               }
+               
+          }
+     }
+
+     @media screen and (min-width: 1920px){
+          .myReason_question{
+               left: 20%;
+               width: 350px;
+               
+               p{
+                    text-align: center;
+                    font-size: 1.6rem;
+               }
+          }
+
+          .myReason_answer{
+               width: 600px;
+               margin-right: 400px;
+          }
+     }
+}
+
+section.training{
+     position: relative;
+     width: 100vw;
+     height: 800px;
+     background: #ffffff;
+     z-index: 100;
+     @include title;
+
+     h2, h3{
+          margin-left: 134px;
+     }
+     h2{
+          padding-top: 50px;
+     }
+}
+
+footer{
+     position: relative;
+     z-index: 100;
+     @include contact;
+}
